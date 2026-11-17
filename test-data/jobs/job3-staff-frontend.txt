@@ -1,0 +1,24 @@
+Job Title: Staff Frontend Engineer - Design Systems & Web Architecture
+Company: StripeStream Media
+Location: San Francisco, CA / Remote
+Level: Staff
+
+About the Role:
+We are looking for a Staff Frontend Engineer to lead our web architecture and cross-product UI system used by millions of daily users.
+
+Must-Have Requirements:
+- 8+ years building complex web client architectures.
+- World-class mastery of React, TypeScript, and modern browser rendering engines.
+- Proven experience leading large-scale micro-frontend migrations or design systems.
+- Experience driving cross-team technical initiatives across 20+ engineers.
+- Deep expertise in web performance optimization (Core Web Vitals, bundle splitting).
+
+Nice-to-Have Requirements:
+- Experience contributing to open-source UI libraries.
+- Experience with WebGL or Canvas graphics.
+- Prior experience working in high-growth consumer streaming products.
+
+Responsibilities:
+- Set technical direction and architectural guidelines for frontend teams.
+- Partner with Principal designers to standardize component tokens.
+- Review complex RFCs and mentor senior developers.

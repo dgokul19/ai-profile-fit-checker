@@ -1,69 +1,182 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import { SessionProvider, useSession } from "@/context/SessionContext";
+import { ResumeUploader } from "@/components/upload/ResumeUploader";
+import { JobPostingList } from "@/components/upload/JobPostingList";
+import { FitDashboard } from "@/components/dashboard/FitDashboard";
+import { ChatWindow } from "@/components/chat/ChatWindow";
+import { SAMPLE_RESUME_TEXT, SAMPLE_JOBS } from "@/lib/sample-data";
+import { Loader2 } from "lucide-react";
+import styles from "./page.module.css";
+
+function MainApp() {
+  const { state, dispatch } = useSession();
+
+  const handleStartOver = () => {
+    dispatch({ type: "RESET" });
+  };
+
+  const handleLoadSampleData = async () => {
+    dispatch({ type: "SET_UPLOADING", payload: true });
+    dispatch({ type: "SET_ERROR", payload: null });
+
+    try {
+      // 1. Upload sample resume
+      const resResume = await fetch("/api/upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ type: "resume", text: SAMPLE_RESUME_TEXT }),
+      });
+      const dataResume = await resResume.json();
+      if (!resResume.ok) throw new Error(dataResume.error || "Failed to process resume");
+
+      dispatch({ type: "SET_SESSION_ID", payload: dataResume.sessionId });
+      dispatch({
+        type: "SET_RESUME",
+        payload: {
+          structured: dataResume.structured,
+          preview: dataResume.rawTextPreview,
+        },
+      });
+
+      // 2. Upload 2 sample target jobs
+      for (const job of SAMPLE_JOBS.slice(0, 2)) {
+        const resJob = await fetch("/api/upload", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            type: "job",
+            sessionId: dataResume.sessionId,
+            text: job.text,
+            label: job.label,
+          }),
+        });
+        const dataJob = await resJob.json();
+        if (resJob.ok) {
+          dispatch({
+            type: "ADD_JOB",
+            payload: {
+              id: dataJob.jobId,
+              label: job.label,
+              preview: dataJob.rawTextPreview,
+              structured: dataJob.structured,
+            },
+          });
+        }
+      }
+    } catch (error) {
+      dispatch({
+        type: "SET_ERROR",
+        payload: error instanceof Error ? error.message : "Failed to load sample data",
+      });
+    } finally {
+      dispatch({ type: "SET_UPLOADING", payload: false });
+    }
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className={styles.wrapper}>
+      {/* Global Top Loading Bar */}
+      {(state.isUploading || state.isAnalyzing) && (
+        <div className={styles.topProgressBar} />
+      )}
+
+      {/* Top Header */}
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <span className={styles.logoFit}>Profile</span>
+          <span className={styles.logoCheck}>Fit Check</span>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+          {!state.resumeUploaded && (
+            <button
+              onClick={handleLoadSampleData}
+              disabled={state.isUploading}
+              style={{
+                border: "1px solid #bfdbfe",
+                padding: "6px 14px",
+                fontSize: "12px",
+                fontWeight: 600,
+                borderRadius: "8px",
+                color: "#1d4ed8",
+                backgroundColor: "#eff6ff",
+                cursor: state.isUploading ? "not-allowed" : "pointer",
+                opacity: state.isUploading ? 0.6 : 1,
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+              }}
+            >
+              {state.isUploading ? (
+                <>
+                  <Loader2 size={13} className={styles.spinIcon} />
+                  <span>Loading sample...</span>
+                </>
+              ) : (
+                "Load Sample (Anitha + 2 Jobs)"
+              )}
+            </button>
+          )}
+
+          <button onClick={handleStartOver} className={styles.startOverBtn}>
+            Start over
+          </button>
+        </div>
+      </header>
+
+      {/* Global In-Progress Status Banner */}
+      {(state.isUploading || state.isAnalyzing) && (
+        <div className={styles.globalStatusBanner}>
+          <Loader2 size={15} className={styles.spinIcon} />
+          <span>
+            {state.isUploading
+              ? "Extracting & structuring candidate profile with Groq Llama 3.3..."
+              : `Evaluating requirements & calculating fit across ${state.jobs.length} roles with Groq Llama 3.3...`}
+          </span>
+        </div>
+      )}
+
+      {/* Main Container */}
+      <main className={styles.mainContainer}>
+        {/* Upper Two-Column Layout */}
+        <div className={styles.topColumns}>
+          {/* Left Column: YOUR RESUME + JOB POSTINGS */}
+          <div className={styles.leftColumn}>
+            {/* 1. YOUR RESUME CARD */}
+            <div className={styles.sidebarCard}>
+              <h3 className={styles.cardTitle}>Your Resume</h3>
+              <ResumeUploader />
+            </div>
+
+            {/* 2. JOB POSTINGS (X OF 5) CARD */}
+            <div className={styles.sidebarCard}>
+              <h3 className={styles.cardTitle}>
+                Job Postings ({state.jobs.length} of 5)
+              </h3>
+              <JobPostingList />
+            </div>
+          </div>
+
+          {/* Right Column: Fit dashboard */}
+          <div className={styles.rightColumn}>
+            <FitDashboard />
+          </div>
+        </div>
+
+        {/* Lower Full-Width Section: Ask about your fit */}
+        <div>
+          <ChatWindow />
         </div>
       </main>
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <SessionProvider>
+      <MainApp />
+    </SessionProvider>
   );
 }

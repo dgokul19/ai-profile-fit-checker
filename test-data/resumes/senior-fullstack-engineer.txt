@@ -1,0 +1,35 @@
+ALEX RIVERA
+Senior Full-Stack Software Engineer
+Email: alex.rivera.dev@example.com | Location: Seattle, WA | GitHub: github.com/arivera-dev
+
+PROFESSIONAL SUMMARY
+Results-driven Senior Full-Stack Engineer with 7+ years of experience designing, architecting, and deploying high-scale distributed web applications. Deep expertise in TypeScript, React, Next.js, Node.js, and PostgreSQL. Proven track record optimizing web performance and leading micro-frontend migrations.
+
+TECHNICAL SKILLS
+- Languages: TypeScript, JavaScript (ES6+), Python, SQL, HTML5, CSS3
+- Frontend: React 18, Next.js (App Router), Tailwind CSS, Redux Toolkit, React Query, Webpack, Vite
+- Backend: Node.js, Express, NestJS, REST APIs, GraphQL, FastAPI
+- Databases: PostgreSQL, Redis, MongoDB, Prisma ORM
+- DevOps & Cloud: AWS (S3, ECS, Lambda), Docker, GitHub Actions, Terraform
+- Testing: Jest, Vitest, React Testing Library, Playwright, Cypress
+
+PROFESSIONAL EXPERIENCE
+
+Senior Software Engineer | CloudScale Systems | 2021 - Present
+- Architected and delivered customer portal in Next.js 14 and TypeScript, improving First Contentful Paint by 42% for 500k+ monthly active users.
+- Designed resilient RESTful microservices in Node.js and PostgreSQL handling 15,000 requests per minute with 99.99% uptime.
+- Led migration of monolithic state management to React Query and Zustand, eliminating redundant network calls by 35%.
+- Mentored 6 mid and junior engineers in TypeScript best practices, test-driven development, and code reviews.
+
+Full-Stack Developer | InnovateTech Labs | 2018 - 2021
+- Developed interactive web dashboards utilizing React, TypeScript, and Tailwind CSS.
+- Implemented real-time collaboration features using WebSockets and Redis pub/sub.
+- Automated CI/CD pipelines with GitHub Actions and Docker, reducing deployment cycle from 45 minutes to 7 minutes.
+- Integrated Stripe billing and webhook handling with idempotent transactional workflows.
+
+EDUCATION
+Bachelor of Science in Computer Science
+University of Washington | Graduated 2018
+
+CERTIFICATIONS
+- AWS Certified Solutions Architect - Associate (2022)

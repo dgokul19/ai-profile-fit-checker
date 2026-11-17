@@ -1,0 +1,114 @@
+# GOKULAN DHATCHINAMOORTHY
+
+**Phone:** +91 81227 01839  
+**Email:** dgokul19@gmail.com  
+**LinkedIn:** LinkedIn  
+**Portfolio:** Portfolio
+
+**ASSOCIATE TECH LEAD · AI FULL STACK ENGINEER**
+
+## PROFESSIONAL SUMMARY
+
+- Associate Technical Lead with 9+ years of experience building scalable full-stack web applications and enterprise-grade systems.
+- Currently leading the architecture and development of a production-ready RAG-based AI chatbot and spearheading its migration to an Agentic AI architecture using Python, FastAPI, and LangGraph.
+- Designed and delivered WhatsApp channel integration using Meta's Webhook API, extending the Hello Aldar chatbot to serve all non-login functionalities natively within WhatsApp across multiple malls.
+- Built and optimised real-time financial trading dashboards and high-volume reporting systems handling 500K+ transactions.
+- Proven experience delivering high-performance platforms for Fortune 500 clients (DBS Bank, Walmart) with real-time data systems and complex state management.
+- Experienced in leading cross-functional teams, driving technical decisions, mentoring engineers, and ensuring production-quality delivery.
+
+## TECHNICAL SKILLS
+
+**WEB TECHNOLOGIES:** JavaScript (ES6+), TypeScript, HTML5, CSS3/SCSS
+
+**FRONTEND FRAMEWORKS:** React.js, Next.js, Angular, Redux, NgRx, RxJS, Redux-Saga
+
+**BACKEND FRAMEWORKS:** Node.js, Express.js, NestJS, FastAPI, REST APIs, WebSocket
+
+**GEN AI:** OpenAI, RAG Design, LangGraph, Agentic AI, Prompt Engineering, Azure AI Search, LlamaParse, Chunking & Embedding
+
+**DATABASE:** MySQL, MongoDB
+
+**CLOUD & DEVOPS:** Azure DevOps, Vercel, OpenShift, Docker, Jenkins
+
+**TOOLS & LIBRARIES:** AG-Grid, Webpack, ESLint, D3.js, ExcelJS, Git/GitHub/Bitbucket
+
+**TESTING:** Jest, Mocha, Cypress, Pytest
+
+**DESIGN TOOLS:** Figma, Google Stitch, Photoshop CC
+
+## WORK EXPERIENCE
+
+### ASSOCIATE TECHNICAL LEAD
+**DBIZ.AI | Kochi, May 2025 – Present**
+
+- Taking ownership of migrating the traditional GenAI chatbot into an Agentic AI chatbot using Python and LangGraph — enabling dynamic multi-step reasoning, tool-calling pipelines, stateful conversation graphs, and autonomous task execution, significantly improving the chatbot's ability to handle complex, multi-turn user intents beyond static RAG retrieval.
+- Took full ownership of implementing WhatsApp channel integration for Hello Aldar using the Meta WhatsApp Business Webhook API, delivering all non-login chatbot functionalities (mall information, restaurant bookings, property queries, FAQs, and customer interactions) natively within WhatsApp, while architecting a multi-tenant WhatsApp routing layer enabling each mall to operate through dedicated WhatsApp Business numbers with fully isolated conversational flows and branding within a shared, scalable infrastructure.
+- Designed and architected a production-grade RAG-based GenAI chatbot platform integrating OpenAI LLM with Azure AI Search (Vector + Hybrid retrieval), serving both public and internal enterprise applications.
+- Designed and implemented cron-driven autonomous ingestion pipelines supporting both periodic retrieval and event-driven processing of unstructured enterprise documents from Azure Blob Storage — performing chunking, embedding generation, and vector indexing into Azure AI Search for real-time RAG retrieval.
+- Designed and implemented an AI-powered academic report summarisation workflow within Hello Aldar by pre-fetching student reports, parsing structured PDF data using LlamaParse, and generating well-formatted, parent-friendly report summaries.
+- Achieved a 63% reduction in LLM intent detection latency (3.2s → 1.2s) through advanced prompt optimisation, intelligent caching, and retrieval tuning, alongside a 50% improvement in overall response times (5–6s → 3s) for frequently asked topics.
+
+**Environment:** Next.js, TypeScript, Python, FastAPI, LangGraph, OpenAI, LlamaParse, Azure AI Search, RAG System, Prompt Engineering, Meta WhatsApp Business API, Webhook Integration.
+
+### SENIOR SOFTWARE ENGINEER
+**TECHNOPALS PVT LTD (Client: DBS Bank) | Singapore, Nov 2022 – Jul 2024**
+
+- Developed and maintained core insurance features within the CreditEE banking platform, implementing complex state management solutions using NgRx to handle multi-step workflows and real-time data synchronisation.
+- Improved application responsiveness and reduced state-related bugs by 30% through architectural improvements and efficient store design patterns.
+- Mentored 3 junior developers through code reviews, pair-programming sessions, and technical documentation, accelerating their onboarding and productivity.
+- Built a real-time foreign exchange trading dashboard serving 200+ daily active traders, integrating WebSocket connections for live price updates and AG-Grid for high-performance data visualisation of 10,000+ rows.
+- Implemented Redux middleware for handling complex async operations and optimistic updates, ensuring a seamless user experience during network latency.
+- Collaborated with DevOps and backend teams to streamline CI/CD pipeline integration using Jenkins and Bitbucket, reducing deployment time by 40%.
+- Enhanced code-quality standards through comprehensive code reviews and establishing TypeScript best practices across the team.
+
+**Environment:** React.js, Node.js, Express, WebSocket (SockJS), AG-Grid, Redux, TypeScript, Jenkins, Bitbucket.
+
+### SOFTWARE ENGINEER III
+**WALMART GLOBAL TECH INDIA | Chennai, May 2020 – Nov 2022**
+
+- Architected and delivered a high-volume reporting tool for Black Friday events, consolidating data from 15+ sources into a unified dashboard — enabling leadership to analyse 500K+ transactions in real time and make data-driven merchandising decisions.
+- Developed and maintained scalable front-end applications using React.js, Redux, and Node.js, serving 1,000+ internal users across supply chain and inventory management teams.
+- Collaborated with backend engineers to optimise API integrations, reducing application load time by 45% through code splitting, lazy loading, and efficient state management.
+- Built and maintained a comprehensive internal React component library with 30+ reusable UI and data-visualisation components (using D3.js), standardising development practices across 5+ product teams and reducing development time by 25%.
+- Integrated the Cypress automated testing framework within the CI/CD pipeline, achieving 80% test coverage and reducing production bugs by 35%.
+- Mentored junior developers through regular knowledge-sharing sessions on React and front-end best practices and performance optimisation techniques.
+
+**Environment:** JavaScript, React.js, Express.js, Redux, Redux-Saga, Node.js, D3.js, AG-Grid, ExcelJS, CI/CD, Cypress.
+
+### SOFTWARE ENGINEER
+**CONGRUENT GLOBAL | Chennai, Apr 2018 – Apr 2020**
+
+- Designed and developed a multi-browser-compatible B2B/B2C e-commerce platform using AngularJS and Node.js, supporting 5K+ monthly transactions across retail and wholesale channels.
+- Built and maintained RESTful APIs using Express.js and MongoDB, implementing secure authentication, payment gateway integration, and order management workflows with 99.9% uptime.
+- Developed a Node.js data-validation pipeline for user-uploaded CSV files (product catalogues, inventory), reducing data errors by 50% through automated cleaning, format standardisation, and business-rule validation.
+- Wrote clean, semantic HTML, CSS, and JavaScript code to create UI elements, layouts, and styles.
+- Conducted cross-browser compatibility testing (Chrome, Firefox, Safari, Edge) and resolved rendering inconsistencies to ensure a consistent user experience.
+- Collaborated with cross-functional teams including product managers and QA to deliver features on time across 15+ sprint cycles.
+
+**Environment:** JavaScript, AngularJS, Node.js, Express.js, MySQL, MongoDB, Bitbucket.
+
+### UI & UX DEVELOPER
+**EDATALABS PVT LTD | Chennai, Feb 2017 – Mar 2018**
+
+- Created wireframes and interactive prototypes to outline the structure and layout of web pages and mobile app screens using Photoshop, to visualise and test user flows and interactions.
+- Developed the front end of web applications, ensuring that the user interface was responsive and visually engaging.
+- Created responsive layouts that adapt to various screen sizes and orientations, providing an optimal user experience on desktops, tablets, and smartphones.
+- Developed and implemented features such as location search, route optimisation, and real-time traffic updates using the Google Maps JavaScript API and Places API; also implemented interactive mapping features including custom markers, routes, and geocoding functionality.
+- Customised map styles and functionalities to match application requirements, improving user experience by tailoring map aesthetics and interactions.
+
+**Environment:** HTML5, CSS3/SASS, Bootstrap, JavaScript, AngularJS, Geolocation API, GitHub, Photoshop CC.
+
+### WEB DEVELOPER
+**ECPHASIS INFOTECH PVT LTD | Chennai, Mar 2015 – Nov 2016**
+
+- Developed 50+ responsive websites for diverse clients across industries including retail, healthcare, and hospitality, delivering pixel-perfect implementations from design mockups.
+- Built interactive user interfaces using HTML5, CSS3/SASS, jQuery, and AngularJS, implementing animations, transitions, and dynamic content loading for enhanced user engagement.
+- Performed comprehensive cross-browser testing and debugging across multiple devices and browsers, ensuring consistent functionality and appearance.
+- Created brand identity elements including logos, style guides, and marketing materials using Photoshop CC, maintaining visual consistency across digital touchpoints.
+
+**Environment:** HTML5, CSS3/SASS, Bootstrap, jQuery, AJAX, AngularJS, Photoshop CC.
+
+## ACADEMIC QUALIFICATION
+
+- Graduated Bachelor of Engineering (CSE) in June 2014 from Jaya Institute of Technology, Thiruvallur.
+- Graduated Higher Secondary Certificate in March 2010 from National Higher Secondary School, Mannargudi.

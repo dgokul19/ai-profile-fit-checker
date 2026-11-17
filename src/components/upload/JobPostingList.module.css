@@ -1,0 +1,199 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.jobCard {
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.15s ease;
+}
+
+.jobCard:hover {
+  border-color: #d1d5db;
+}
+
+.jobCardActive {
+  border: 2px solid #2563eb !important;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px rgba(37, 99, 235, 0.05);
+}
+
+.jobMeta {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.jobLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.jobSubtitle {
+  font-size: 11px;
+  color: #6b7280;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.removeBtn:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.addTriggerBtn {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px dashed #d1d5db;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4b5563;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.addTriggerBtn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+  background-color: #f9fafb;
+}
+
+.addFormBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.textarea {
+  width: 100%;
+  height: 96px;
+  padding: 8px;
+  font-size: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.formActions {
+  display: flex;
+  gap: 8px;
+}
+
+.submitBtn {
+  flex: 1;
+  padding: 6px 12px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.submitBtn:hover {
+  background-color: #1d4ed8;
+}
+
+.submitBtn:disabled {
+  opacity: 0.5;
+}
+
+.cancelBtn {
+  padding: 6px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #374151;
+}
+
+.analyzeTriggerBtn {
+  width: 100%;
+  padding: 11px 16px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  box-shadow: 0 1px 3px rgba(37, 99, 235, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.analyzeTriggerBtn:hover:not(:disabled) {
+  background-color: #1d4ed8;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1px);
+}
+
+.analyzeTriggerBtn:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  background-color: #3b82f6;
+}
+
+.spinIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

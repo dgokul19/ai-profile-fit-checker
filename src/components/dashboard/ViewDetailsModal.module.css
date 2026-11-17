@@ -1,0 +1,221 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-height: 88vh;
+}
+
+.modalHeader {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jobBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.modalTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.modalSubtext {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.closeBtn {
+  padding: 6px;
+  border-radius: 8px;
+  color: #9ca3af;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.closeBtn:hover {
+  color: #374151;
+  background-color: #f3f4f6;
+}
+
+.modalBody {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.matchesList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.matchItem {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.matchHeader {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.matchNameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconMet {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.iconPartial {
+  color: #d97706;
+  flex-shrink: 0;
+}
+
+.iconMissing {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.requirementName {
+  font-weight: 700;
+  color: #111827;
+}
+
+.priorityBadgeMust {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background-color: #fee2e2;
+  color: #991b1b;
+  flex-shrink: 0;
+}
+
+.priorityBadgeNice {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+  color: #374151;
+  flex-shrink: 0;
+}
+
+.explanation {
+  color: #4b5563;
+  padding-left: 24px;
+  line-height: 1.5;
+}
+
+.evidenceBox {
+  margin-left: 24px;
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  color: #065f46;
+  font-size: 11px;
+  display: flex;
+  align-items: start;
+  gap: 6px;
+}
+
+.noEvidence {
+  margin-left: 24px;
+  font-size: 11px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.modalFooter {
+  padding: 12px 24px;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footerCloseBtn {
+  padding: 6px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  background-color: #ffffff;
+}
+
+.footerCloseBtn:hover {
+  background-color: #f3f4f6;
+}

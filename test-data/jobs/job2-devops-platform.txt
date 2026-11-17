@@ -1,0 +1,25 @@
+Job Title: Senior DevOps & Platform Engineer
+Company: CloudNative Infrastructure Corp
+Location: Remote
+Level: Senior
+
+About the Role:
+We need an experienced Platform Engineer to scale our multi-region Kubernetes infrastructure and automate developer delivery workflows.
+
+Must-Have Requirements:
+- 5+ years managing enterprise infrastructure in production.
+- Expert-level Kubernetes cluster operations and Helm chart authoring.
+- Deep expertise in Terraform infrastructure as code.
+- Experience with Go or Python for internal tooling automation.
+- Proven experience with Prometheus, Grafana, and Datadog monitoring.
+- Mastery of Linux systems administration and network protocols.
+
+Nice-to-Have Requirements:
+- AWS Solutions Architect Professional certification.
+- Experience with service mesh (Istio, Linkerd).
+- Knowledge of ArgoCD GitOps workflows.
+- Experience securing multi-tenant clusters.
+
+Responsibilities:
+- Maintain 99.99% availability across Kubernetes clusters.
+- Build developer self-service tooling and observability pipelines.

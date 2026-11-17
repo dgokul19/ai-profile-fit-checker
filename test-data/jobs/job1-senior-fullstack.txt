@@ -1,0 +1,26 @@
+Job Title: Senior Full-Stack Engineer (React / TypeScript / Node.js)
+Company: FinTech Innovations Inc.
+Location: Remote (US)
+Level: Senior
+
+About the Role:
+We are seeking a Senior Full-Stack Engineer to architect and build our next-generation financial analytics suite. You will work across modern React frontends and Node.js backend services.
+
+Must-Have Requirements:
+- 5+ years of software engineering experience with modern web technologies.
+- Strong proficiency in TypeScript and JavaScript.
+- Demonstrated hands-on production experience with React and Next.js.
+- Strong backend experience building scalable APIs in Node.js.
+- Experience with relational databases, specifically PostgreSQL.
+- Experience with unit and integration testing (Jest, Playwright or similar).
+
+Nice-to-Have Requirements:
+- Hands-on experience with AWS services (ECS, S3, Lambda).
+- Experience with caching and state using Redis.
+- Background in financial technology or high-throughput payment systems.
+- Familiarity with CI/CD deployment pipelines using GitHub Actions.
+
+Responsibilities:
+- Build responsive user interfaces and robust APIs.
+- Collaborate with product designers and engineers to deliver features bi-weekly.
+- Mentor junior engineers and uphold code quality standards.
