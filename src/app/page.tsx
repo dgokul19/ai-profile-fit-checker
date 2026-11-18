@@ -84,8 +84,8 @@ function MainApp() {
       {/* Top Header */}
       <header className={styles.header}>
         <div className={styles.logo}>
-          <span className={styles.logoFit}>Profile</span>
-          <span className={styles.logoCheck}>Fit Check</span>
+          <span className={styles.logoFit}>Job</span>
+          <span className={styles.logoCheck}>Fit Analyzer</span>
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
@@ -114,7 +114,7 @@ function MainApp() {
                   <span>Loading sample...</span>
                 </>
               ) : (
-                "Load Sample (Anitha + 2 Jobs)"
+                "Load Sample (Gokul + 2 Jobs)"
               )}
             </button>
           )}

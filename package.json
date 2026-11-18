@@ -1,5 +1,5 @@
 {
-  "name": "resume-job-fit-analyzer",
+  "name": "jobfit-analyzer",
   "version": "0.1.0",
   "private": true,
   "scripts": {

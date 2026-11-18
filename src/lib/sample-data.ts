@@ -1,6 +1,6 @@
-export const SAMPLE_RESUME_TEXT = `ANITHA RAMASWAMY
+export const SAMPLE_RESUME_TEXT = `Gokulan RAMASWAMY
 Senior Backend Engineer
-Email: anitha.dev@example.com | Phone: +1 415 555 0192 | Location: San Jose, CA
+Email: gokulan.dev@example.com | Phone: +1 415 555 0192 | Location: San Jose, CA
 
 PROFESSIONAL SUMMARY
 Senior Backend Engineer with 6+ years of experience architecting resilient distributed systems, scalable REST APIs, and event-driven data pipelines. Core expertise in Python, PostgreSQL, SQL, Redis, and high-concurrency microservices.

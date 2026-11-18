@@ -10,7 +10,7 @@ export function ResumeUploader() {
   const [dragActive, setDragActive] = useState(false);
   const [pasteMode, setPasteMode] = useState(false);
   const [pasteText, setPasteText] = useState("");
-  const [fileName, setFileName] = useState<string>("Anitha_Resume.pdf");
+  const [fileName, setFileName] = useState<string>("Gokulan_Resume.pdf");
 
   const uploadResume = useCallback(
     async (file?: File, text?: string) => {

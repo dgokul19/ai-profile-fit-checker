@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Profile Fit Checker — Resume–Job Fit Analyzer",
+  title: "JobFit Analyzer — Resume–Job Fit Analyzer",
   description:
     "Upload one resume + multiple target jobs to get scored, evidence-grounded fit analysis in seconds.",
 };
