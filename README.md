@@ -88,9 +88,8 @@ If taking this prototype into an producttion handling hundreds of thousands of c
 - **Blob Storage:** original uploaded files
 - **Azure AI Search:** chunk text and vectors for hybrid retrieval
 - **LLM gateway:** one module that calls the primary model and falls back on failure
----
 
-## 4.RAG with Azure AI Search & Decisions
+#### RAG with Azure AI Search & Decisions
 
 **Chunking**
 - Split by section, not just length: resume by role, skills, and education; jobs by responsibilities, requirements, and nice-to-haves.
@@ -104,9 +103,7 @@ If taking this prototype into an producttion handling hundreds of thousands of c
 - Use hybrid search (keyword plus vector) with the semantic ranker( for better accuracy ).
 - For each job requirement, retrieve the top resume chunks and send only those to the model.
 
-
-
-### Prompt & Context Management
+## 4. Prompt & Context Management
 - Structured Prompts: Few-shot schema instructions with strict directives: *"Extract ONLY what is explicitly stated in the text. For any field not clearly present, use empty array. NEVER infer or assume experience."*
 - Context Injection for Chat**: The conversational assistant prompt is dynamically compiled from the candidate's verified skills, parsed experience, and the match status table of all loaded jobs. This ensures the chat never has to "guess" which job had which requirement.
 
